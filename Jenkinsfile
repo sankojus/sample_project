@@ -19,9 +19,11 @@ pipeline {
     }
     stage('satge3') {
     steps{
-      sh '''
-      echo my first pipeline is success
-'''
+      sh """
+      git add .
+      git commit -m "my first commit"
+      git push orign master
+"""
     }
     }
 
