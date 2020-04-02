@@ -5,6 +5,7 @@ pipeline {
         steps {
             git branch: 'master', credentialsId: 'git-ss', url: "https://github.com/sankojus/sample_project.git"
           sh "ls -lrth"
+          sh "touch f1 f2 f3"
         }
     }
 
