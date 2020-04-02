@@ -1,14 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('step1') {
-      steps {
-        sh ''' 
-        pwd
-        ls -lrth
-        
-        '''
-      }
+    stage('gitclone') {
+        steps {
+            git branch: 'master', credentialsId: 'git-ss', url: "https://github.com/sankojus/sample_project.git"
+          sh "ls -lrth"
+        }
     }
 
     stage('stage2') {
