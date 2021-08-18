@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('gitclone') {
         steps {
-            git branch: "master", credentialsId: "git-ss", url: "https://github.com/sankojus/sample_project.git"
+            git branch: "new", credentialsId: "git-ss", url: "https://github.com/sankojus/sample_project.git"
             sh "ls -lrth"
           
         } 
